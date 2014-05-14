@@ -20,8 +20,6 @@
     
     [self.nick_field becomeFirstResponder];
     self.nick_field.delegate = self;
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,7 +29,8 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    //verify for length of string before saving
+    [self.delegate didSaveNick:self];
     return YES;
 }
 

@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KCChooseNickController.h"
 
-@interface KCViewController : UIViewController
+@interface KCViewController : UIViewController <KCChooseNickControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *nickname;
+@property (strong, nonatomic) NSString* nickname;
+
+@property (weak, nonatomic) IBOutlet UILabel *nickname_label;
 @property (weak, nonatomic) IBOutlet UILabel *karma_value;
 @property (weak, nonatomic) IBOutlet UIImageView *avatar;
 

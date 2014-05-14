@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KCViewController.h"
+
+@class KCChooseNickController;
+
+@protocol KCChooseNickControllerDelegate <NSObject>
+- (void)didSaveNick:(KCChooseNickController *)controller;
+@end
 
 @interface KCChooseNickController : UIViewController <UITextFieldDelegate>
+
+@property (nonatomic, weak) id <KCChooseNickControllerDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UITextField *nick_field;
 

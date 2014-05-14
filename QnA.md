@@ -19,13 +19,11 @@ Name two or three limitations of the described product that might cause problems
 
 > Many people doesn't has bluetooth enabled by default, so maybe it would be difficult to find people to share karma
 
-> It could create a dystopian society, like in the episode of the television series Community where they release a similar app called MeawMeawBeans
-
 --
 
 How long did this assignment take?
 
->
+> 2h + 
 
 
 What was the hardest part?
