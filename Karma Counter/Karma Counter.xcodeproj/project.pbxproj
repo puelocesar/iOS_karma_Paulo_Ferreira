@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A9DDEE91923C1FC004ECA40 /* KCBluetoothPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9DDEE81923C1FC004ECA40 /* KCBluetoothPeripheral.m */; };
+		3A9DDEEC1923C354004ECA40 /* KCBluetoothCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9DDEEB1923C354004ECA40 /* KCBluetoothCentral.m */; };
 		3A9F3E961922FE65005F33E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3E951922FE65005F33E6 /* Foundation.framework */; };
 		3A9F3E981922FE65005F33E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3E971922FE65005F33E6 /* CoreGraphics.framework */; };
 		3A9F3E9A1922FE65005F33E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3E991922FE65005F33E6 /* UIKit.framework */; };
@@ -27,6 +29,8 @@
 		3A9F3ED21922FF5E005F33E6 /* avatar04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F3ECE1922FF5E005F33E6 /* avatar04@2x.png */; };
 		3A9F3ED419230301005F33E6 /* ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F3ED319230301005F33E6 /* ball@2x.png */; };
 		3A9F3ED819230636005F33E6 /* KCChooseNickController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F3ED719230636005F33E6 /* KCChooseNickController.m */; };
+		3A9F3EE01923B2EB005F33E6 /* KCBluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F3EDF1923B2EB005F33E6 /* KCBluetoothManager.m */; };
+		3A9F3EE21923B496005F33E6 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3EE11923B496005F33E6 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A9DDEE71923C1FC004ECA40 /* KCBluetoothPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCBluetoothPeripheral.h; sourceTree = "<group>"; };
+		3A9DDEE81923C1FC004ECA40 /* KCBluetoothPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCBluetoothPeripheral.m; sourceTree = "<group>"; };
+		3A9DDEEA1923C354004ECA40 /* KCBluetoothCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCBluetoothCentral.h; sourceTree = "<group>"; };
+		3A9DDEEB1923C354004ECA40 /* KCBluetoothCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCBluetoothCentral.m; sourceTree = "<group>"; };
 		3A9F3E921922FE65005F33E6 /* Karma Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Karma Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9F3E951922FE65005F33E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3A9F3E971922FE65005F33E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,6 +74,9 @@
 		3A9F3ED319230301005F33E6 /* ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball@2x.png"; sourceTree = "<group>"; };
 		3A9F3ED619230636005F33E6 /* KCChooseNickController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCChooseNickController.h; sourceTree = "<group>"; };
 		3A9F3ED719230636005F33E6 /* KCChooseNickController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCChooseNickController.m; sourceTree = "<group>"; };
+		3A9F3EDE1923B2EB005F33E6 /* KCBluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCBluetoothManager.h; sourceTree = "<group>"; };
+		3A9F3EDF1923B2EB005F33E6 /* KCBluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCBluetoothManager.m; sourceTree = "<group>"; };
+		3A9F3EE11923B496005F33E6 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9F3EE21923B496005F33E6 /* CoreBluetooth.framework in Frameworks */,
 				3A9F3E981922FE65005F33E6 /* CoreGraphics.framework in Frameworks */,
 				3A9F3E9A1922FE65005F33E6 /* UIKit.framework in Frameworks */,
 				3A9F3E961922FE65005F33E6 /* Foundation.framework in Frameworks */,
@@ -114,6 +126,7 @@
 		3A9F3E941922FE65005F33E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A9F3EE11923B496005F33E6 /* CoreBluetooth.framework */,
 				3A9F3E951922FE65005F33E6 /* Foundation.framework */,
 				3A9F3E971922FE65005F33E6 /* CoreGraphics.framework */,
 				3A9F3E991922FE65005F33E6 /* UIKit.framework */,
@@ -132,6 +145,12 @@
 				3A9F3EAD1922FE65005F33E6 /* Images.xcassets */,
 				3A9F3E9C1922FE65005F33E6 /* Supporting Files */,
 				3A9F3ECA1922FF5E005F33E6 /* Resources */,
+				3A9F3EDE1923B2EB005F33E6 /* KCBluetoothManager.h */,
+				3A9F3EDF1923B2EB005F33E6 /* KCBluetoothManager.m */,
+				3A9DDEE71923C1FC004ECA40 /* KCBluetoothPeripheral.h */,
+				3A9DDEE81923C1FC004ECA40 /* KCBluetoothPeripheral.m */,
+				3A9DDEEA1923C354004ECA40 /* KCBluetoothCentral.h */,
+				3A9DDEEB1923C354004ECA40 /* KCBluetoothCentral.m */,
 			);
 			path = "Karma Counter";
 			sourceTree = "<group>";
@@ -290,10 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9DDEE91923C1FC004ECA40 /* KCBluetoothPeripheral.m in Sources */,
 				3A9F3EAC1922FE65005F33E6 /* KCViewController.m in Sources */,
 				3A9F3EA61922FE65005F33E6 /* KCAppDelegate.m in Sources */,
 				3A9F3EA21922FE65005F33E6 /* main.m in Sources */,
 				3A9F3ED819230636005F33E6 /* KCChooseNickController.m in Sources */,
+				3A9F3EE01923B2EB005F33E6 /* KCBluetoothManager.m in Sources */,
+				3A9DDEEC1923C354004ECA40 /* KCBluetoothCentral.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +443,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karma Counter/Karma Counter-Prefix.pch";
 				INFOPLIST_FILE = "Karma Counter/Karma Counter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -434,7 +458,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karma Counter/Karma Counter-Prefix.pch";
 				INFOPLIST_FILE = "Karma Counter/Karma Counter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -498,6 +524,7 @@
 				3A9F3EC61922FE66005F33E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A9F3EC71922FE66005F33E6 /* Build configuration list for PBXNativeTarget "Karma CounterTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +533,7 @@
 				3A9F3EC91922FE66005F33E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

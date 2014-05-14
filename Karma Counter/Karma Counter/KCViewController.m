@@ -14,6 +14,8 @@
 
 @implementation KCViewController
 
+KCBluetoothManager* bluetoothManager;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,6 +28,9 @@
             [self performSegueWithIdentifier:@"nick" sender:self];
         });
     }
+    
+    bluetoothManager = [[KCBluetoothManager alloc] init];
+    [bluetoothManager setReceiverDelegate:self];
 }
 
 - (void) get_saved_nick
@@ -38,6 +43,12 @@
 {
     _nickname = nickname;
     self.nickname_label.text = nickname;
+}
+
+- (void) setKarma:(int)karma
+{
+    _karma = karma;
+    self.karma_value.text = [NSString stringWithFormat:@"%d", karma];
 }
 
 /* navigation */
@@ -63,6 +74,16 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (IBAction)sendKarma:(id)sender
+{
+    [bluetoothManager sendKarma];
+}
+
+- (void)didReceiveKarma
+{
+    self.karma = self.karma+1;
 }
 
 @end
