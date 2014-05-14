@@ -23,7 +23,7 @@ Name two or three limitations of the described product that might cause problems
 
 How long did this assignment take?
 
-> 2h + 
+> 2h + 3h + 2h
 
 
 What was the hardest part?

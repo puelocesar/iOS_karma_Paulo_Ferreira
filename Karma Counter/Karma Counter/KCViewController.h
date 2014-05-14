@@ -10,7 +10,8 @@
 #import "KCChooseNickController.h"
 #import "KCBluetoothManager.h"
 
-@interface KCViewController : UIViewController <KCChooseNickControllerDelegate, KCBluetoothPeripheralDelegate>
+@interface KCViewController : UIViewController <KCChooseNickControllerDelegate, KCBluetoothPeripheralDelegate,
+    KCBluetoothCentralDelegate>
 
 @property (strong, nonatomic) NSString* nickname;
 @property (nonatomic) int karma;

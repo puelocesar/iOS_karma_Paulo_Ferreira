@@ -8,10 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "KCBluetoothPeripheral.h"
+#import "KCAvatarView.h"
+
+@protocol KCBluetoothCentralDelegate <NSObject>
+- (void)registeredNewPeripheral: (KCAvatarData*) data;
+- (void)removedPeripheral: (NSString*) did;
+@end
 
 @interface KCBluetoothCentral : NSObject <CBCentralManagerDelegate, CBPeripheralDelegate>
 
+@property (nonatomic, weak) id <KCBluetoothCentralDelegate> delegate;
+@property (nonatomic, strong) NSMutableArray* peripherals;
+
 //TODO: select the peripheral that will receive
-- (void)send_karma;
+- (void)sendKarma;
 
 @end

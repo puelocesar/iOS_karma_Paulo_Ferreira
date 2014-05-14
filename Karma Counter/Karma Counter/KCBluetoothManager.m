@@ -24,12 +24,17 @@ KCBluetoothPeripheral *peripheral;
 - (void)sendKarma
 {
     //must define who will receive the karma
-    [central send_karma];
+    [central sendKarma];
 }
 
-- (void) setReceiverDelegate: (id <KCBluetoothPeripheralDelegate>) delegate
+- (void) setReceiveKarmaDelegate: (id <KCBluetoothPeripheralDelegate>) delegate
 {
     peripheral.delegate = delegate;
+}
+
+- (void) setRegisteredDevicesDelegate: (id <KCBluetoothCentralDelegate>) delegate
+{
+    central.delegate = delegate;
 }
 
 @end

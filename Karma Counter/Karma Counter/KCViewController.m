@@ -15,6 +15,7 @@
 @implementation KCViewController
 
 KCBluetoothManager* bluetoothManager;
+NSMutableArray* avatars;
 
 - (void)viewDidLoad
 {
@@ -30,7 +31,10 @@ KCBluetoothManager* bluetoothManager;
     }
     
     bluetoothManager = [[KCBluetoothManager alloc] init];
-    [bluetoothManager setReceiverDelegate:self];
+    [bluetoothManager setReceiveKarmaDelegate:self];
+    [bluetoothManager setRegisteredDevicesDelegate:self];
+    
+    avatars = [[NSMutableArray alloc] init];
 }
 
 - (void) get_saved_nick
@@ -84,6 +88,23 @@ KCBluetoothManager* bluetoothManager;
 - (void)didReceiveKarma
 {
     self.karma = self.karma+1;
+}
+
+- (void)registeredNewPeripheral:(KCAvatarData *)data
+{
+    KCAvatarView* avatar_view = [[KCAvatarView alloc] initWithFrame:CGRectMake(135, 110, 50, 60)];
+    avatar_view.data = data;
+    [self.view addSubview:avatar_view];
+    
+    [avatars addObject:avatar_view];
+}
+
+- (void)removedPeripheral:(NSString *)did
+{
+    for (KCAvatarView* view in avatars) {
+        if ([view.data.did isEqualToString:did])
+            [view removeFromSuperview];
+    }
 }
 
 @end
