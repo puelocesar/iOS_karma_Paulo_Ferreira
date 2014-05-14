@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A9F3E961922FE65005F33E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3E951922FE65005F33E6 /* Foundation.framework */; };
+		3A9F3E981922FE65005F33E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3E971922FE65005F33E6 /* CoreGraphics.framework */; };
+		3A9F3E9A1922FE65005F33E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3E991922FE65005F33E6 /* UIKit.framework */; };
+		3A9F3EA01922FE65005F33E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F3E9E1922FE65005F33E6 /* InfoPlist.strings */; };
+		3A9F3EA21922FE65005F33E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F3EA11922FE65005F33E6 /* main.m */; };
+		3A9F3EA61922FE65005F33E6 /* KCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F3EA51922FE65005F33E6 /* KCAppDelegate.m */; };
+		3A9F3EA91922FE65005F33E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F3EA71922FE65005F33E6 /* Main.storyboard */; };
+		3A9F3EAC1922FE65005F33E6 /* KCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F3EAB1922FE65005F33E6 /* KCViewController.m */; };
+		3A9F3EAE1922FE65005F33E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F3EAD1922FE65005F33E6 /* Images.xcassets */; };
+		3A9F3EB51922FE66005F33E6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3EB41922FE66005F33E6 /* XCTest.framework */; };
+		3A9F3EB61922FE66005F33E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3E951922FE65005F33E6 /* Foundation.framework */; };
+		3A9F3EB71922FE66005F33E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9F3E991922FE65005F33E6 /* UIKit.framework */; };
+		3A9F3EBF1922FE66005F33E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F3EBD1922FE66005F33E6 /* InfoPlist.strings */; };
+		3A9F3EC11922FE66005F33E6 /* Karma_CounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F3EC01922FE66005F33E6 /* Karma_CounterTests.m */; };
+		3A9F3ECF1922FF5E005F33E6 /* avatar01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F3ECB1922FF5E005F33E6 /* avatar01@2x.png */; };
+		3A9F3ED01922FF5E005F33E6 /* avatar02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F3ECC1922FF5E005F33E6 /* avatar02@2x.png */; };
+		3A9F3ED11922FF5E005F33E6 /* avatar03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F3ECD1922FF5E005F33E6 /* avatar03@2x.png */; };
+		3A9F3ED21922FF5E005F33E6 /* avatar04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F3ECE1922FF5E005F33E6 /* avatar04@2x.png */; };
+		3A9F3ED419230301005F33E6 /* ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A9F3ED319230301005F33E6 /* ball@2x.png */; };
+		3A9F3ED819230636005F33E6 /* KCChooseNickController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F3ED719230636005F33E6 /* KCChooseNickController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A9F3EB81922FE66005F33E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A9F3E8A1922FE65005F33E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A9F3E911922FE65005F33E6;
+			remoteInfo = "Karma Counter";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A9F3E921922FE65005F33E6 /* Karma Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Karma Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9F3E951922FE65005F33E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3A9F3E971922FE65005F33E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3A9F3E991922FE65005F33E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3A9F3E9D1922FE65005F33E6 /* Karma Counter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Karma Counter-Info.plist"; sourceTree = "<group>"; };
+		3A9F3E9F1922FE65005F33E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3A9F3EA11922FE65005F33E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3A9F3EA31922FE65005F33E6 /* Karma Counter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Karma Counter-Prefix.pch"; sourceTree = "<group>"; };
+		3A9F3EA41922FE65005F33E6 /* KCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCAppDelegate.h; sourceTree = "<group>"; };
+		3A9F3EA51922FE65005F33E6 /* KCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCAppDelegate.m; sourceTree = "<group>"; };
+		3A9F3EA81922FE65005F33E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A9F3EAA1922FE65005F33E6 /* KCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCViewController.h; sourceTree = "<group>"; };
+		3A9F3EAB1922FE65005F33E6 /* KCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCViewController.m; sourceTree = "<group>"; };
+		3A9F3EAD1922FE65005F33E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3A9F3EB31922FE66005F33E6 /* Karma CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Karma CounterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9F3EB41922FE66005F33E6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3A9F3EBC1922FE66005F33E6 /* Karma CounterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Karma CounterTests-Info.plist"; sourceTree = "<group>"; };
+		3A9F3EBE1922FE66005F33E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3A9F3EC01922FE66005F33E6 /* Karma_CounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Karma_CounterTests.m; sourceTree = "<group>"; };
+		3A9F3ECB1922FF5E005F33E6 /* avatar01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar01@2x.png"; sourceTree = "<group>"; };
+		3A9F3ECC1922FF5E005F33E6 /* avatar02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar02@2x.png"; sourceTree = "<group>"; };
+		3A9F3ECD1922FF5E005F33E6 /* avatar03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar03@2x.png"; sourceTree = "<group>"; };
+		3A9F3ECE1922FF5E005F33E6 /* avatar04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar04@2x.png"; sourceTree = "<group>"; };
+		3A9F3ED319230301005F33E6 /* ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball@2x.png"; sourceTree = "<group>"; };
+		3A9F3ED619230636005F33E6 /* KCChooseNickController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCChooseNickController.h; sourceTree = "<group>"; };
+		3A9F3ED719230636005F33E6 /* KCChooseNickController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCChooseNickController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A9F3E8F1922FE65005F33E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F3E981922FE65005F33E6 /* CoreGraphics.framework in Frameworks */,
+				3A9F3E9A1922FE65005F33E6 /* UIKit.framework in Frameworks */,
+				3A9F3E961922FE65005F33E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F3EB01922FE66005F33E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F3EB51922FE66005F33E6 /* XCTest.framework in Frameworks */,
+				3A9F3EB71922FE66005F33E6 /* UIKit.framework in Frameworks */,
+				3A9F3EB61922FE66005F33E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A9F3E891922FE65005F33E6 = {
+			isa = PBXGroup;
+			children = (
+				3A9F3E9B1922FE65005F33E6 /* Karma Counter */,
+				3A9F3EBA1922FE66005F33E6 /* Karma CounterTests */,
+				3A9F3E941922FE65005F33E6 /* Frameworks */,
+				3A9F3E931922FE65005F33E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A9F3E931922FE65005F33E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F3E921922FE65005F33E6 /* Karma Counter.app */,
+				3A9F3EB31922FE66005F33E6 /* Karma CounterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A9F3E941922FE65005F33E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F3E951922FE65005F33E6 /* Foundation.framework */,
+				3A9F3E971922FE65005F33E6 /* CoreGraphics.framework */,
+				3A9F3E991922FE65005F33E6 /* UIKit.framework */,
+				3A9F3EB41922FE66005F33E6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A9F3E9B1922FE65005F33E6 /* Karma Counter */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F3EA41922FE65005F33E6 /* KCAppDelegate.h */,
+				3A9F3EA51922FE65005F33E6 /* KCAppDelegate.m */,
+				3A9F3EA71922FE65005F33E6 /* Main.storyboard */,
+				3A9F3ED519230614005F33E6 /* controllers */,
+				3A9F3EAD1922FE65005F33E6 /* Images.xcassets */,
+				3A9F3E9C1922FE65005F33E6 /* Supporting Files */,
+				3A9F3ECA1922FF5E005F33E6 /* Resources */,
+			);
+			path = "Karma Counter";
+			sourceTree = "<group>";
+		};
+		3A9F3E9C1922FE65005F33E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F3E9D1922FE65005F33E6 /* Karma Counter-Info.plist */,
+				3A9F3E9E1922FE65005F33E6 /* InfoPlist.strings */,
+				3A9F3EA11922FE65005F33E6 /* main.m */,
+				3A9F3EA31922FE65005F33E6 /* Karma Counter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A9F3EBA1922FE66005F33E6 /* Karma CounterTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F3EC01922FE66005F33E6 /* Karma_CounterTests.m */,
+				3A9F3EBB1922FE66005F33E6 /* Supporting Files */,
+			);
+			path = "Karma CounterTests";
+			sourceTree = "<group>";
+		};
+		3A9F3EBB1922FE66005F33E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F3EBC1922FE66005F33E6 /* Karma CounterTests-Info.plist */,
+				3A9F3EBD1922FE66005F33E6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A9F3ECA1922FF5E005F33E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F3ED319230301005F33E6 /* ball@2x.png */,
+				3A9F3ECB1922FF5E005F33E6 /* avatar01@2x.png */,
+				3A9F3ECC1922FF5E005F33E6 /* avatar02@2x.png */,
+				3A9F3ECD1922FF5E005F33E6 /* avatar03@2x.png */,
+				3A9F3ECE1922FF5E005F33E6 /* avatar04@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3A9F3ED519230614005F33E6 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F3EAA1922FE65005F33E6 /* KCViewController.h */,
+				3A9F3EAB1922FE65005F33E6 /* KCViewController.m */,
+				3A9F3ED619230636005F33E6 /* KCChooseNickController.h */,
+				3A9F3ED719230636005F33E6 /* KCChooseNickController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A9F3E911922FE65005F33E6 /* Karma Counter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9F3EC41922FE66005F33E6 /* Build configuration list for PBXNativeTarget "Karma Counter" */;
+			buildPhases = (
+				3A9F3E8E1922FE65005F33E6 /* Sources */,
+				3A9F3E8F1922FE65005F33E6 /* Frameworks */,
+				3A9F3E901922FE65005F33E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Karma Counter";
+			productName = "Karma Counter";
+			productReference = 3A9F3E921922FE65005F33E6 /* Karma Counter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A9F3EB21922FE66005F33E6 /* Karma CounterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9F3EC71922FE66005F33E6 /* Build configuration list for PBXNativeTarget "Karma CounterTests" */;
+			buildPhases = (
+				3A9F3EAF1922FE66005F33E6 /* Sources */,
+				3A9F3EB01922FE66005F33E6 /* Frameworks */,
+				3A9F3EB11922FE66005F33E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A9F3EB91922FE66005F33E6 /* PBXTargetDependency */,
+			);
+			name = "Karma CounterTests";
+			productName = "Karma CounterTests";
+			productReference = 3A9F3EB31922FE66005F33E6 /* Karma CounterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A9F3E8A1922FE65005F33E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KC;
+				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					3A9F3EB21922FE66005F33E6 = {
+						TestTargetID = 3A9F3E911922FE65005F33E6;
+					};
+				};
+			};
+			buildConfigurationList = 3A9F3E8D1922FE65005F33E6 /* Build configuration list for PBXProject "Karma Counter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A9F3E891922FE65005F33E6;
+			productRefGroup = 3A9F3E931922FE65005F33E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A9F3E911922FE65005F33E6 /* Karma Counter */,
+				3A9F3EB21922FE66005F33E6 /* Karma CounterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A9F3E901922FE65005F33E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F3ED01922FF5E005F33E6 /* avatar02@2x.png in Resources */,
+				3A9F3ECF1922FF5E005F33E6 /* avatar01@2x.png in Resources */,
+				3A9F3ED21922FF5E005F33E6 /* avatar04@2x.png in Resources */,
+				3A9F3ED419230301005F33E6 /* ball@2x.png in Resources */,
+				3A9F3EAE1922FE65005F33E6 /* Images.xcassets in Resources */,
+				3A9F3EA01922FE65005F33E6 /* InfoPlist.strings in Resources */,
+				3A9F3ED11922FF5E005F33E6 /* avatar03@2x.png in Resources */,
+				3A9F3EA91922FE65005F33E6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F3EB11922FE66005F33E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F3EBF1922FE66005F33E6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A9F3E8E1922FE65005F33E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F3EAC1922FE65005F33E6 /* KCViewController.m in Sources */,
+				3A9F3EA61922FE65005F33E6 /* KCAppDelegate.m in Sources */,
+				3A9F3EA21922FE65005F33E6 /* main.m in Sources */,
+				3A9F3ED819230636005F33E6 /* KCChooseNickController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9F3EAF1922FE66005F33E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F3EC11922FE66005F33E6 /* Karma_CounterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A9F3EB91922FE66005F33E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A9F3E911922FE65005F33E6 /* Karma Counter */;
+			targetProxy = 3A9F3EB81922FE66005F33E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A9F3E9E1922FE65005F33E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A9F3E9F1922FE65005F33E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3A9F3EA71922FE65005F33E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A9F3EA81922FE65005F33E6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A9F3EBD1922FE66005F33E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A9F3EBE1922FE66005F33E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A9F3EC21922FE66005F33E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3A9F3EC31922FE66005F33E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A9F3EC51922FE66005F33E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Karma Counter/Karma Counter-Prefix.pch";
+				INFOPLIST_FILE = "Karma Counter/Karma Counter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3A9F3EC61922FE66005F33E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Karma Counter/Karma Counter-Prefix.pch";
+				INFOPLIST_FILE = "Karma Counter/Karma Counter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3A9F3EC81922FE66005F33E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Karma Counter.app/Karma Counter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Karma Counter/Karma Counter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Karma CounterTests/Karma CounterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3A9F3EC91922FE66005F33E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Karma Counter.app/Karma Counter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Karma Counter/Karma Counter-Prefix.pch";
+				INFOPLIST_FILE = "Karma CounterTests/Karma CounterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A9F3E8D1922FE65005F33E6 /* Build configuration list for PBXProject "Karma Counter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9F3EC21922FE66005F33E6 /* Debug */,
+				3A9F3EC31922FE66005F33E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9F3EC41922FE66005F33E6 /* Build configuration list for PBXNativeTarget "Karma Counter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9F3EC51922FE66005F33E6 /* Debug */,
+				3A9F3EC61922FE66005F33E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3A9F3EC71922FE66005F33E6 /* Build configuration list for PBXNativeTarget "Karma CounterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9F3EC81922FE66005F33E6 /* Debug */,
+				3A9F3EC91922FE66005F33E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A9F3E8A1922FE65005F33E6 /* Project object */;
+}
