@@ -53,16 +53,6 @@
                                     <constraint firstAttribute="height" constant="126" id="aPT-bL-NPf"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYr-1L-uwh">
-                                <rect key="frame" x="137" y="83" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="send">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="sendKarma:" destination="pAC-jx-1jw" eventType="touchUpInside" id="Xma-qJ-skj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -75,6 +65,7 @@
                         <outlet property="avatar" destination="Lkv-Re-3ig" id="GiA-mA-m2m"/>
                         <outlet property="karma_value" destination="dNw-QZ-Ik4" id="DSX-Vc-cxI"/>
                         <outlet property="nickname_label" destination="8cG-UN-ygy" id="XgN-iJ-hD4"/>
+                        <outlet property="user_area" destination="56O-Kd-3mU" id="3Qe-MP-tYu"/>
                         <segue destination="qP1-Sw-h2q" kind="modal" identifier="nick" id="cIR-g9-f9L"/>
                     </connections>
                 </viewController>

@@ -11,7 +11,7 @@
 
 @interface KCBluetoothManager : NSObject
 
-- (void) sendKarma;
+- (void)sendKarmaWithPeripheral: (CBPeripheral*) peripheral;
 
 - (void) setReceiveKarmaDelegate: (id <KCBluetoothPeripheralDelegate>) delegate;
 

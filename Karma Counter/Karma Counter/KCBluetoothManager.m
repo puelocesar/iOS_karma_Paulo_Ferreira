@@ -21,10 +21,9 @@ KCBluetoothPeripheral *peripheral;
     return self;
 }
 
-- (void)sendKarma
+- (void)sendKarmaWithPeripheral: (CBPeripheral*) peripheral
 {
-    //must define who will receive the karma
-    [central sendKarma];
+    [central sendKarmaWithPeripheral:peripheral];
 }
 
 - (void) setReceiveKarmaDelegate: (id <KCBluetoothPeripheralDelegate>) delegate

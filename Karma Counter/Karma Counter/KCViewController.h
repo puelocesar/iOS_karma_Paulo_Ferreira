@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "KCChooseNickController.h"
 #import "KCBluetoothManager.h"
+#import "KCAvatarView.h"
 
 @interface KCViewController : UIViewController <KCChooseNickControllerDelegate, KCBluetoothPeripheralDelegate,
-    KCBluetoothCentralDelegate>
+    KCBluetoothCentralDelegate,
+    UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) NSString* nickname;
 @property (nonatomic) int karma;
@@ -19,7 +21,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *nickname_label;
 @property (weak, nonatomic) IBOutlet UILabel *karma_value;
 @property (weak, nonatomic) IBOutlet UIImageView *avatar;
-
-- (IBAction)sendKarma:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *user_area;
 
 @end

@@ -34,9 +34,15 @@ CBUUID* karma_service_id;
     NSLog(@"did discover peripheral");
     
     [self.peripherals addObject:peripheral];
-    [central connectPeripheral:peripheral options:nil];
     
-    [central stopScan];
+    KCAvatarData* data = [[KCAvatarData alloc] init];
+    data.name = @"teste";
+    data.peripheral = peripheral;
+    
+    //adds this peripheral to the UI
+    [self.delegate registeredNewPeripheral:data];
+    
+    //we will connect to it only we are in need to send data
 }
 
 - (void)centralManager:(CBCentralManager *)central
@@ -73,28 +79,24 @@ didDiscoverCharacteristicsForService:(CBService *)service
     }
     
     for (CBCharacteristic *characteristic in service.characteristics) {
-        karma_characteristic = characteristic;
-        NSLog(@"characterisc is ok");
-        
-        KCAvatarData* data = [[KCAvatarData alloc] init];
-        data.name = @"teste";
-        data.did = @"1";
-        
-        [self.delegate registeredNewPeripheral:data];
+        [self sendsKarmaToPeripheral:peripheral withCharacteristic:characteristic];
     }
 }
 
-- (void)sendKarma
+- (void)sendKarmaWithPeripheral: (CBPeripheral*) peripheral
 {
-    NSLog(@"%d", self.peripherals.count);
-    
-    int i = 1;
-    NSData* value = [NSData dataWithBytes:&i length:sizeof(i)];
-    
-    CBPeripheral* p = self.peripherals[0];
-    
-    [p writeValue:value forCharacteristic:karma_characteristic
-                      type:CBCharacteristicWriteWithResponse];
+    [centralManager connectPeripheral:peripheral options:nil];
+}
+
+- (void)sendsKarmaToPeripheral: (CBPeripheral*) peripheral withCharacteristic: (CBCharacteristic *) characteristic
+{
+    if (peripheral.state == CBPeripheralStateConnected) {
+        int i = 1;
+        NSData* value = [NSData dataWithBytes:&i length:sizeof(i)];
+        
+        [peripheral writeValue:value forCharacteristic:characteristic
+                 type:CBCharacteristicWriteWithResponse];
+    }
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral
@@ -107,23 +109,10 @@ didWriteValueForCharacteristic:(CBCharacteristic *)characteristic
     }
     else {
         NSLog(@"value wrote with success");
+        
+        //cancelling connection as soon as possible
+        [centralManager cancelPeripheralConnection:peripheral];
     }
-}
-
-- (void) peripheral:(CBPeripheral *)peripheral didModifyServices:(NSArray *)invalidatedServices
-{
-    [self removePeripheral:peripheral];
-}
-
-- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
-{
-    [self removePeripheral:peripheral];
-}
-
-- (void)removePeripheral: (CBPeripheral*) peripheral
-{
-    [self.peripherals removeObject:peripheral];
-    [self.delegate removedPeripheral:@"1"];
 }
 
 @end

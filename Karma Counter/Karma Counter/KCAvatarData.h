@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
 @interface KCAvatarData : NSObject
 
-@property (nonatomic, strong) NSString* did;
 @property (nonatomic, strong) NSString* name;
+@property (nonatomic, weak) CBPeripheral* peripheral;
 
 @end

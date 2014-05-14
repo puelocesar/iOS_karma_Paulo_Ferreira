@@ -80,9 +80,10 @@ NSMutableArray* avatars;
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)sendKarma:(id)sender
+- (void)sendKarma:(UITapGestureRecognizer*)recognizer
 {
-    [bluetoothManager sendKarma];
+    KCAvatarView* view = (KCAvatarView*) recognizer.view;
+    [bluetoothManager sendKarmaWithPeripheral:view.data.peripheral];
 }
 
 - (void)didReceiveKarma
@@ -92,19 +93,16 @@ NSMutableArray* avatars;
 
 - (void)registeredNewPeripheral:(KCAvatarData *)data
 {
-    KCAvatarView* avatar_view = [[KCAvatarView alloc] initWithFrame:CGRectMake(135, 110, 50, 60)];
+    float y = self.user_area.center.y - 150;
+    
+    KCAvatarView* avatar_view = [[KCAvatarView alloc] initWithFrame:CGRectMake(135, y, 50, 60)];
     avatar_view.data = data;
     [self.view addSubview:avatar_view];
     
+    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sendKarma:)];
+    [avatar_view addGestureRecognizer:tap];
+    
     [avatars addObject:avatar_view];
-}
-
-- (void)removedPeripheral:(NSString *)did
-{
-    for (KCAvatarView* view in avatars) {
-        if ([view.data.did isEqualToString:did])
-            [view removeFromSuperview];
-    }
 }
 
 @end
