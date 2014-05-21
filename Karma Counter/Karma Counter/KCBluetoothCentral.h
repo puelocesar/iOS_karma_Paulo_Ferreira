@@ -17,9 +17,8 @@
 @interface KCBluetoothCentral : NSObject <CBCentralManagerDelegate, CBPeripheralDelegate>
 
 @property (nonatomic, weak) id <KCBluetoothCentralDelegate> delegate;
-@property (nonatomic, strong) NSMutableArray* peripherals;
+@property (nonatomic, strong) NSMutableDictionary* peripherals;
 
-//TODO: select the peripheral that will receive
 - (void)sendKarmaWithPeripheral: (CBPeripheral*) peripheral;
 
 @end

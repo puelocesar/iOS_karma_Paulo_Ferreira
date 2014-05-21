@@ -15,7 +15,6 @@
 @implementation KCViewController
 
 KCBluetoothManager* bluetoothManager;
-NSMutableArray* avatars;
 
 - (void)viewDidLoad
 {
@@ -29,12 +28,17 @@ NSMutableArray* avatars;
             [self performSegueWithIdentifier:@"nick" sender:self];
         });
     }
-    
+    else [self initBluetooth];
+
+    self.circular_view.delegate = self;
+}
+
+- (void) initBluetooth
+{
     bluetoothManager = [[KCBluetoothManager alloc] init];
-    [bluetoothManager setReceiveKarmaDelegate:self];
+
+    [bluetoothManager setPeripheralDelegate:self andName:_nickname];
     [bluetoothManager setRegisteredDevicesDelegate:self];
-    
-    avatars = [[NSMutableArray alloc] init];
 }
 
 - (void) get_saved_nick
@@ -71,7 +75,9 @@ NSMutableArray* avatars;
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:self.nickname forKey:@"nick"];
     [defaults synchronize];
-    
+
+    [self initBluetooth];
+
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -80,10 +86,9 @@ NSMutableArray* avatars;
     [super didReceiveMemoryWarning];
 }
 
-- (void)sendKarma:(UITapGestureRecognizer*)recognizer
+- (void)karmaSentTo:(KCAvatarData *)avatar
 {
-    KCAvatarView* view = (KCAvatarView*) recognizer.view;
-    [bluetoothManager sendKarmaWithPeripheral:view.data.peripheral];
+    [bluetoothManager sendKarmaWithPeripheral:avatar.peripheral];
 }
 
 - (void)didReceiveKarma
@@ -93,16 +98,12 @@ NSMutableArray* avatars;
 
 - (void)registeredNewPeripheral:(KCAvatarData *)data
 {
-    float y = self.user_area.center.y - 150;
-    
-    KCAvatarView* avatar_view = [[KCAvatarView alloc] initWithFrame:CGRectMake(135, y, 50, 60)];
-    avatar_view.data = data;
-    [self.view addSubview:avatar_view];
-    
-    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sendKarma:)];
-    [avatar_view addGestureRecognizer:tap];
-    
-    [avatars addObject:avatar_view];
+    [self.circular_view addAvatar:data];
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [self.circular_view rearrangeViews];
 }
 
 @end

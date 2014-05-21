@@ -12,6 +12,6 @@
 @interface KCAvatarData : NSObject
 
 @property (nonatomic, strong) NSString* name;
-@property (nonatomic, weak) CBPeripheral* peripheral;
+@property (nonatomic, strong) CBPeripheral* peripheral;
 
 @end

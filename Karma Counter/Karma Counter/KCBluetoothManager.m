@@ -26,9 +26,10 @@ KCBluetoothPeripheral *peripheral;
     [central sendKarmaWithPeripheral:peripheral];
 }
 
-- (void) setReceiveKarmaDelegate: (id <KCBluetoothPeripheralDelegate>) delegate
+- (void)setPeripheralDelegate: (id <KCBluetoothPeripheralDelegate>) delegate andName: (NSString *) name
 {
     peripheral.delegate = delegate;
+    peripheral.nickname = name;
 }
 
 - (void) setRegisteredDevicesDelegate: (id <KCBluetoothCentralDelegate>) delegate

@@ -13,7 +13,7 @@
 
 - (void)sendKarmaWithPeripheral: (CBPeripheral*) peripheral;
 
-- (void) setReceiveKarmaDelegate: (id <KCBluetoothPeripheralDelegate>) delegate;
+- (void)setPeripheralDelegate: (id <KCBluetoothPeripheralDelegate>) delegate andName: (NSString *) name;
 
 - (void) setRegisteredDevicesDelegate: (id <KCBluetoothCentralDelegate>) delegate;
 
