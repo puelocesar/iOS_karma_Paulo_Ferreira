@@ -12,6 +12,7 @@
 
 @protocol KCBluetoothCentralDelegate <NSObject>
 - (void)registeredNewPeripheral: (KCAvatarData*) data;
+- (void)finishedSendingKarma: (bool) success;
 @end
 
 @interface KCBluetoothCentral : NSObject <CBCentralManagerDelegate, CBPeripheralDelegate>

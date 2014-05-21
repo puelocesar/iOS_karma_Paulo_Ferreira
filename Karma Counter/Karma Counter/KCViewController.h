@@ -23,4 +23,6 @@
 @property (weak, nonatomic) IBOutlet UIView *user_area;
 @property (weak, nonatomic) IBOutlet KCCircularView *circular_view;
 
+@property (weak, nonatomic) IBOutlet UILabel *message;
+
 @end

@@ -56,13 +56,26 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sending ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3w-tT-Lpb">
+                                <rect key="frame" x="0.0" y="538" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ewO-P6-IZC"/>
+                                    <constraint firstAttribute="width" constant="320" id="l5S-nt-2qq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="56O-Kd-3mU" secondAttribute="centerY" id="4X6-FA-kZi"/>
                             <constraint firstItem="6Sn-pj-JHt" firstAttribute="top" secondItem="Xxs-tw-ibI" secondAttribute="bottom" id="5ak-AV-hER"/>
+                            <constraint firstItem="6Sn-pj-JHt" firstAttribute="top" secondItem="L3w-tT-Lpb" secondAttribute="bottom" id="5zU-8H-e0h"/>
                             <constraint firstItem="Xxs-tw-ibI" firstAttribute="top" secondItem="ad9-rY-PJO" secondAttribute="bottom" id="7NU-CI-GdE"/>
                             <constraint firstAttribute="trailing" secondItem="Xxs-tw-ibI" secondAttribute="trailing" id="Wlc-cK-2lz"/>
+                            <constraint firstItem="L3w-tT-Lpb" firstAttribute="leading" secondItem="FYi-hR-XQH" secondAttribute="leading" id="YOr-In-ctK"/>
                             <constraint firstItem="Xxs-tw-ibI" firstAttribute="leading" secondItem="FYi-hR-XQH" secondAttribute="leading" id="dQ0-xd-1OO"/>
                             <constraint firstAttribute="centerX" secondItem="56O-Kd-3mU" secondAttribute="centerX" id="gvu-5K-X1E"/>
                         </constraints>
@@ -72,6 +85,7 @@
                         <outlet property="avatar" destination="Lkv-Re-3ig" id="GiA-mA-m2m"/>
                         <outlet property="circular_view" destination="Xxs-tw-ibI" id="5Hq-fI-4tb"/>
                         <outlet property="karma_value" destination="dNw-QZ-Ik4" id="DSX-Vc-cxI"/>
+                        <outlet property="message" destination="L3w-tT-Lpb" id="Rnj-Cm-Hm8"/>
                         <outlet property="nickname_label" destination="8cG-UN-ygy" id="XgN-iJ-hD4"/>
                         <outlet property="user_area" destination="56O-Kd-3mU" id="3Qe-MP-tYu"/>
                         <segue destination="qP1-Sw-h2q" kind="modal" identifier="nick" id="cIR-g9-f9L"/>

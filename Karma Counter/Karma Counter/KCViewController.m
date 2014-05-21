@@ -89,6 +89,10 @@ KCBluetoothManager* bluetoothManager;
 - (void)karmaSentTo:(KCAvatarData *)avatar
 {
     [bluetoothManager sendKarmaWithPeripheral:avatar.peripheral];
+
+    [UIView animateWithDuration:0.2 animations:^{
+        self.message.alpha = 1;
+    }];
 }
 
 - (void)didReceiveKarma
@@ -104,6 +108,13 @@ KCBluetoothManager* bluetoothManager;
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
     [self.circular_view rearrangeViews];
+}
+
+- (void)finishedSendingKarma:(bool)success
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        self.message.alpha = 0;
+    }];
 }
 
 @end

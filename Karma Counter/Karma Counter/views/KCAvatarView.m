@@ -17,12 +17,12 @@ UILabel* label;
     UIImageView* avatar = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"avatar01.png"]];
     avatar.frame = CGRectMake(0, 0, 50, 40);
     avatar.contentMode = UIViewContentModeScaleAspectFit;
-    
+
     [self addSubview:avatar];
     
     label = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, 50, 20)];
     label.textAlignment = NSTextAlignmentCenter;
-    
+
     [self addSubview:label];
 }
 

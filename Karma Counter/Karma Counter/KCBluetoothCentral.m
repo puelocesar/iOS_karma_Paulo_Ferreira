@@ -168,13 +168,15 @@ didWriteValueForCharacteristic:(CBCharacteristic *)characteristic
     
     if (error) {
         NSLog(@"Error writing characteristic value: %@", [error debugDescription]);
+        [self.delegate finishedSendingKarma:false];
     }
     else {
         NSLog(@"value wrote with success");
-        
-        //cancelling connection as soon as possible
-        [centralManager cancelPeripheralConnection:peripheral];
+        [self.delegate finishedSendingKarma:true];
     }
+
+    //cancelling connection as soon as possible
+    [centralManager cancelPeripheralConnection:peripheral];
 }
 
 
