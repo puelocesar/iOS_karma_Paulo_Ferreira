@@ -55,8 +55,11 @@ bool already_added_service = false;
 - (void)peripheralManager:(CBPeripheralManager *)peripheral
             didAddService:(CBService *)service
                     error:(NSError *)error {
-    
-    [peripheral startAdvertising:@{CBAdvertisementDataServiceUUIDsKey: @[karma_service_id]}];
+
+    NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+
+    [peripheral startAdvertising:@{CBAdvertisementDataServiceUUIDsKey: @[karma_service_id],
+            CBAdvertisementDataLocalNameKey: idfv}];
     
     if (error) {
         NSLog(@"Error publishing service: %@", [error localizedDescription]);

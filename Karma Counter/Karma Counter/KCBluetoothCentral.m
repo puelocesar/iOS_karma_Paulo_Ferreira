@@ -34,22 +34,45 @@ CBUUID* karma_service_id;
     return [self.peripherals objectForKey:peripheral.identifier.UUIDString];
 }
 
+- (KCAvatarData *) findAvatarDataWithKey: (NSString *) key
+{
+    for (KCAvatarData *data in self.peripherals.allValues)
+        if ([data.key isEqualToString:key])
+            return data;
+
+    return nil;
+}
+
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
     NSLog(@"did discover peripheral");
 
-    KCAvatarData* data = [self getAvatarDataForPeripheral:peripheral];
+    //peripheral.identifier.UUIDString changes, so we have to use another identifier to avoid duplicates
+    NSString *key = [advertisementData objectForKey:@"kCBAdvDataLocalName"];
+    KCAvatarData *data = [self findAvatarDataWithKey:key];
 
-    if (data == NULL) {
+    if (data == nil && key != nil) {
         data = [[KCAvatarData alloc] init];
         data.peripheral = peripheral;
+        data.key = key;
 
         [self.peripherals setValue:data forKey:peripheral.identifier.UUIDString];
 
-        NSLog(@"%@", peripheral.identifier.UUIDString);
+        NSLog(@"%@", key);
 
         //connect to the peripheral the first time to get the name
         [centralManager connectPeripheral:peripheral options:nil];
+    }
+    else if (data != nil) {
+
+        NSString* old_id = data.peripheral.identifier.UUIDString;
+
+        //updates the existing cached peripheral to its new identifier
+        data.peripheral = peripheral;
+
+        //adds the peripheral to a new key, and delete the old one
+        [self.peripherals setValue:data forKey:peripheral.identifier.UUIDString];
+        [self.peripherals removeObjectForKey:old_id];
     }
 }
 
