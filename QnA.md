@@ -23,29 +23,29 @@ Name two or three limitations of the described product that might cause problems
 
 How long did this assignment take?
 
-> 2h + 3h + 2h
+> 12h
 
 
 What was the hardest part?
 
->
+> Bluetooth connection. The fact bluetooth changes the peripheral identifier sometimes, producing duplicate avatars on the interface
 
 
 If you could go back and give yourself advice at the beginning of the project, what would it be?
 
->
+> To test it on 3 devices, not only two, because that introduced new bugs later
 
 
 Did you learn something new?
 
->
+> Yes, the whole CoreBluetooth was new for me
 
 
 Do you feel that this assignment allowed you to showcase your abilities effectively?
 
->
+> I think so. Even if I didn't knew CoreBluetooth, I could learn how to work with it fast enough.
 
 
 Are there any iOS-related skills that you weren't able to demonstrate in this excercise? If so, what are they?
 
->
+> In my apps I usually use a lot of CoreGraphics drawing, and wasn't able to use it on this exercise
